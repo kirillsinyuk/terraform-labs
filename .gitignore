@@ -2,3 +2,5 @@
 terraform-course.iml
 */.terraform
 */.terraform.lock.hcl
+section2/terraform.tfstate
+section2/terraform.tfstate.backup
