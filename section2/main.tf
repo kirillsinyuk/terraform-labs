@@ -20,7 +20,7 @@ resource "aws_vpc" "vpc" {
     Name        = var.vpc_name
     Environment = "demo_environment"
     Terraform   = "true"
-    Region = data.aws_region.current.name
+    Region      = data.aws_region.current.name
   }
 }
 
