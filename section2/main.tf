@@ -274,10 +274,16 @@ resource "aws_security_group" "vpc-ping" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
-    description = "Allow all ip and ports outboun"
+    description = "Allow all ip and ports outbound"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
+
+# in case you want to import existing resource in terraform launch `terraform import aws_instance.aws-linux INSTANCE_ID`
+resource "aws_instance" "aws_linux" {
+  ami = "ami-0249211c9916306f8"
+  instance_type = "t3.micro"
 }
